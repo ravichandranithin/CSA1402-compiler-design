@@ -1,0 +1,87 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	char input[5];
+	printf("Enter the operator:");
+	scanf("%s",input);
+	switch(input[0])
+	{
+		case'>':
+			if(input[1]=='=')
+			{
+				printf("greater than equal");	
+			}
+			else
+			{
+				printf("greater than");
+			}
+			break;
+	    case'&':
+		    if(input[1]=='&')
+		    {
+		      	printf("logical AND");
+		    }
+			else
+			{
+				printf("bitwise AND");
+			}
+			break;
+		case'|':
+			if(input[1]=='|')
+			{
+				printf("logical OR");
+			}
+			else
+			{
+				printf("bitwise OR");
+			}
+			break;
+		case'<':
+			if(input[1]=='=')
+			{
+				printf("less than or equal");
+			}
+			else
+			{
+				printf("less than");
+			}
+			break;
+		case'!':
+			if(input[1]=='=')
+			{
+				printf("not equal");
+			}
+			else
+			{
+				printf("bitwise NOT");
+			}
+			break;
+		case'+':
+			{
+				printf("Addition");
+			}
+			break;
+		case'-':
+			{
+				printf("subtraction");
+			}
+			break;
+		case'*':
+			{
+				printf("multiplication");
+			}
+			break;
+	case'/':
+{
+	printf("division");
+}
+			break;
+		default:
+{
+				printf("not an operator");
+}
+		getch();
+		return 0;
+}
+}
