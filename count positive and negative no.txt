@@ -1,0 +1,17 @@
+%{
+int posno=0,negno=0;
+%}
+%%
+^[-][0-9]+ {negno++;
+             printf("negative number=%s\n",yytext);}
+[0-9]+ {posno++;
+              printf("positive number=%s\n",yytext);}
+%%
+int yywrap(){}
+int main()
+{
+yylex();
+printf("no.of positive numbers=%d,"
+       "no.of negative numbers=%d\n",posno,negno);
+return 0;
+} 

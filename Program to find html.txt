@@ -1,0 +1,29 @@
+%{
+#include <stdio.h>
+%}
+
+%%
+
+"<html>"     printf("<html>\n");
+"</html>"    printf("</html>\n");
+"<head>"     printf("\t<head>\n");
+"</head>"    printf("\t</head>\n");
+"<title>"    printf("\t\t<title>");
+"</title>"   printf("</title>\n");
+"<body>"     printf("\t<body>\n");
+"</body>"    printf("\t</body>\n");
+"<h1>"       printf("\t\t<h1>");
+"</h1>"      printf("</h1>\n");
+"<p>"        printf("\t\t<p>");
+"</p>"       printf("</p>\n");
+
+.            printf("%s", yytext);
+
+%%
+
+int yywrap(void){}
+int main()
+{
+    yylex();
+    return 0;
+}
